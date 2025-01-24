@@ -1,79 +1,74 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Proyecto React Native - Marvel API
 
-# Getting Started
+Este proyecto es una aplicación en React Native que utiliza la API de Marvel. A continuación se presentan los pasos detallados para configurar y ejecutar el proyecto correctamente.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Requisitos previos
 
-## Step 1: Start the Metro Server
+- Tener [Node.js](https://nodejs.org/) instalado en tu sistema.
+- Tener [npm](https://www.npmjs.com/) instalado.
+- Tener un emulador de Android configurado o un dispositivo físico conectado.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Pasos para ejecutar el proyecto
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### 1. Clonar el repositorio
 
-```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
-
-### For Android
+Clona el repositorio en tu máquina local utilizando el siguiente comando:
 
 ```bash
-# using npm
-npm run android
+git clone <Este repositorio>
 
-# OR using Yarn
-yarn android
 ```
 
-### For iOS
+### 2. Ingresar al directorio raíz del proyecto
+
+Clona el repositorio en tu máquina local utilizando el siguiente comando:
 
 ```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+cd <nombre_del_repositorio>
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### 3. Instalar dependencias
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Ejecuta el siguiente comando para instalar todas las dependencias necesarias para el proyecto:
 
-## Step 3: Modifying your App
+```bash
+npm install
+```
 
-Now that you have successfully run the app, let's modify it.
+### 4. Iniciar el servidor de Metro
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Para iniciar el servidor de desarrollo de React Native, ejecuta el siguiente comando:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+```bash
+npx react-native start
+```
 
-## Congratulations! :tada:
+### 5. Abrir el emulador de Android
 
-You've successfully run and modified your React Native App. :partying_face:
+Una vez que Metro esté corriendo, presiona la tecla a en la terminal donde se está ejecutando el servidor de Metro para abrir el emulador de Android. Si ya tienes un emulador corriendo o un dispositivo físico conectado, la aplicación debería iniciar automáticamente en el emulador.
 
-### Now what?
+### 6. Configurar las claves de la API de Marvel
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+Antes de ejecutar la aplicación, debes configurar las claves de acceso a la API de Marvel.
 
-# Troubleshooting
+    Regístrate en el sitio oficial de la API de Marvel: https://developer.marvel.com/.
+    Obtén tus claves PUBLICKEY y PRIVATEKEY.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+A continuación, dirígete al archivo const.js, que se encuentra en el directorio raíz del proyecto. Sustituye las siguientes variables con tus claves proporcionadas por Marvel:
 
-# Learn More
+```bash
+const PUBLICKEY = '<TU_PUBLICKEY>';
+const PRIVATEKEY = '<TU_PRIVATEKEY>';
+```
 
-To learn more about React Native, take a look at the following resources:
+### 7. Ejecutar la aplicación
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Una vez configuradas las claves, puedes ejecutar la aplicación en tu emulador o dispositivo físico. En una nueva terminal, ejecuta el siguiente comando:
+
+```bash
+npx react-native run-android
+```
+
+Esto debería compilar y lanzar la aplicación en tu dispositivo o emulador Android.
+
+¡Listo! Ahora puedes empezar a interactuar con la aplicación utilizando la API de Marvel. Si tienes algún problema durante la configuración, revisa los pasos nuevamente o consulta la documentación oficial de React Native.
