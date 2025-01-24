@@ -51,8 +51,8 @@ Una vez que Metro esté corriendo, presiona la tecla a en la terminal donde se e
 
 Antes de ejecutar la aplicación, debes configurar las claves de acceso a la API de Marvel.
 
-    Regístrate en el sitio oficial de la API de Marvel: https://developer.marvel.com/.
-    Obtén tus claves PUBLICKEY y PRIVATEKEY.
+   - Regístrate en el sitio oficial de la API de Marvel: https://developer.marvel.com/.
+   - Obtén tus claves PUBLICKEY y PRIVATEKEY.
 
 A continuación, dirígete al archivo const.js, que se encuentra en el directorio raíz del proyecto. Sustituye las siguientes variables con tus claves proporcionadas por Marvel:
 
